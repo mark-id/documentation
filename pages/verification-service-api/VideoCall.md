@@ -15,7 +15,7 @@ You can generate video call token and record video call.
 This endpoint lets you create a video call token for video or photo verifications.
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/video-call`
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/video-call`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
@@ -55,7 +55,7 @@ Successful API call returns json response with url which redirects to video call
 This endpoint lets you retrieve video call photos and video.
 
 ### Sending request
-Send a *HTTP Post* request to: `https://ivs.markid.com/api/v2/video-call-record`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/api/v2/video-call-record`
 
 The request must contain JSON with these parameters:
 

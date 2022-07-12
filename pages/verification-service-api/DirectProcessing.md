@@ -19,14 +19,14 @@ If 3D liveness detection and short video before taking photos is required for yo
 
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/process`
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/process`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.com
-- info@markid.com
+- sales@markid.eu
+- info@markid.eu
 - via Dashboard
 :::
 

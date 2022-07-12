@@ -19,16 +19,16 @@ Fraud checking API is an additional service used to further identify a person an
 ### Calling the API:
 
 :::important
-Fraud check endpoint was changed from `https://fraud.markid.com/V1/check` to `https://ivs.markid.com/fraud/check`
+Fraud check endpoint was changed from `https://fraud.markid.eu/V1/check` to `https://ivs.markid.eu/fraud/check`
 :::
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/check`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/check`
 
 The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.com
-- info@markid.com
+- sales@markid.eu
+- info@markid.eu
 - via Dashboard
 :::
 

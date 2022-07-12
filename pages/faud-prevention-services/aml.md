@@ -1,9 +1,9 @@
 ---
 layout: default
 title: AML, PEP & Sanctions, Adverse media
-parent: AML services
+parent: Fraud prevention services
 has_toc: true
-nav_order: 2
+nav_exclude: true
 ---
 
 # AML, PEP & Sanctions, Adverse media
@@ -11,7 +11,7 @@ nav_order: 2
 This service checks whether given person is in PEP or sanctions list, checks adverse media.
 
 :::note  Pricing
-Please contact Mark ID sales team sales@markid.eu for a detailed price-sheet.
+Please contact iDenfy's sales team sales@idenfy.com for a detailed price-sheet.
 :::
 
 ## Callback data

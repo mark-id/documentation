@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Create verification session
-parent: Verification service API
+parent: Fraud prevention services
 has_toc: true
-nav_order: 1
+nav_exclude: true
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -13,9 +13,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 If you have ***API key*** and ***API secret*** you can create a verification token.
 
 :::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.eu
-- info@markid.eu
+***API key*** and ***API secret*** can be retrieved by contacting *iDenfy's tech support* or *iDenfy's sales team*:
+- sales@idenfy.com
+- info@idenfy.com
 - via Dashboard
 :::
 
@@ -24,7 +24,7 @@ If you have ***API key*** and ***API secret*** you can create a verification tok
 <img alt="Token generation UML activity diagram" width="450" src={useBaseUrl('img/TokenGenerationUmlActivityDiagram.jpg')} />
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/token` 
+Send a *HTTP POST* request to: `https://ivs.idenfy.com/api/v2/token` 
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
@@ -32,7 +32,7 @@ The request must contain *basic auth* headers where *username* is *API key* and 
 #### We recommend:
 Provide only clientId value while generating a token. 
 Do not provide whole client information. Often clients make mistakes and cannot pass the verification successfully.
-Use client information (name, surname and etc.) from our system's [webhook](/callbacks/ResultCallback). This would prevent errors and improve user experience.
+Use client information (name, surname and etc.) from our system's [webhook](/pages/faud-prevention-services/ResultCallback). This would prevent errors and improve user experience.
 
 :::caution
 
@@ -47,9 +47,9 @@ The request must contain JSON with optional and mandatory parameters:
 |`clientId`|Yes|A unique string identifying a client.|String|<br/>- Not null<br/>- Max length 100|-|
 |`firstName`|No|A name(s) of a client to be identified.|String|<br/>- Min length 1<br/>- Max length 100 <br/>- Not digits <br/>- Not characters: ```~!@#$%^*()_+={}[]\|:;",<>/?```|-|
 |`lastName`|No|A surname(s) of a client to be identified.|String|<br/>- Min length 1<br/>- Max length 100 <br/>- Not digits <br/>- Not characters: ```~!@#$%^*()_+={}[]\|:;",<>/?```|-|
-|`successUrl`|No|A url where a client will be redirected after a successful verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=success`|
-|`errorUrl`|No|A url where a client will be redirected after a failed verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=fail`|
-|`unverifiedUrl`|No|A url where a client will be redirected after a not analyzed verification. E.g. user immediately cancels process.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=unverified`|
+|`successUrl`|No|A url where a client will be redirected after a successful verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.idenfy.com/result?status=success`|
+|`errorUrl`|No|A url where a client will be redirected after a failed verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.idenfy.com/result?status=fail`|
+|`unverifiedUrl`|No|A url where a client will be redirected after a not analyzed verification. E.g. user immediately cancels process.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.idenfy.com/result?status=unverified`|
 |`locale`|No|A country code in alpha-2 format. Determines what default language a client will see in verification UI.|String|Values:<br/>-`lt`(Lithuanian)<br/>-`en`(English)<br/>-`ru`(Russian)<br/>-`pl`(Polish)<br/>-`lv`(Latvian)<br/>-`ro`(Romanian)<br/>-`it`(Italian)<br/>-`de`(German)<br/>-`fr`(French)<br/>-`sv`(Swedish)<br/>-`es`(Spanish)<br/>-`hu`(Hungarian)<br/>-`ja`(Japanese)<br/>-`bg`(Bulgarian)<br/>-`et`(Estonian)<br/>-`cs`(Czech)|`en`|
 |`showInstructions`|No|Indicates whether instructions should be shown.|Bool|-|`true`|
 |`expiryTime`|No|Length of time in seconds after which a newly generated token will become invalid.|Integer|<br/>- More than 0<br/>- Not exceeding 2592000 (30 days)|`86400`|
@@ -67,15 +67,15 @@ The request must contain JSON with optional and mandatory parameters:
 |`address`|No|Client address provided by partner.|String|- Max length 255|`null`|
 |`tokenType`|No|Determines, what sort of processing the client should go through.|String|Values:<br/>-`DOCUMENT`<br/>-`IDENTIFICATION`<br/>-`VIDEO_CALL`<br/> -`VIDEO_CALL_PHOTOS`<br/>-`VIDEO_CALL_IDENTIFICATION`|`IDENTIFICATION`|
 |`videoCallQuestions`|No|Questions the partner should ask the client in a video call.|List[String]|-|[]|
-|`externalRef`|No|An unique string for external reference to link the client to you and the Mark ID system better.|String|- Length <= 40|`null`|
+|`externalRef`|No|An unique string for external reference to link the client to you and the iDenfy system better.|String|- Length <= 40|`null`|
 |`utilityBill`|No|Require your users to upload a utility bill as an additional step in the verification.|Bool|Can't be used together with `additionalSteps`|`false`|
-|`additionalSteps`|No|Require your users to upload additional photos in their verification process. Please refer to [**this**](AdditionalSteps) manual page for detailed information about additional steps.|JSON object|Valid JSON. Can't be used together with `utilityBill`|`null`|
-|`additionalData`|No|Additional data provided alongside any [additionalSteps](/API/AdditionalSteps), for example - Social Security Number in `UTILITY_BILL`|JSON object|Must be used with [additionalSteps](/API/AdditionalSteps)|`null`|
+|`additionalSteps`|No|Require your users to upload additional photos in their verification process. Please refer to [**this**](/pages/verification-service-api/AdditionalSteps) manual page for detailed information about additional steps.|JSON object|Valid JSON. Can't be used together with `utilityBill`|`null`|
+|`additionalData`|No|Additional data provided alongside any [additionalSteps](/pages/verification-service-api/AdditionalSteps), for example - Social Security Number in `UTILITY_BILL`|JSON object|Must be used with [additionalSteps](/pages/verification-service-api/AdditionalSteps)|`null`|
 |`callbackUrl`|No|A webhook endpoint for the generated session.|String|Must be HTTPS URL, requires permissions enabled(contact tech support via dashboard if the request is refused).|-|
 
 :::note
 If you're generating a 8 digit mobile code, please keep in mind that for security purposes, `expiryTime` cannot be longer than `generateDigitString` default value(must be the value as default `expiryTime`).
-If you need to increase the maximum default value of the mobile code expiration, please contact sales@markid.eu or our technical support team via Dashboard. 
+If you need to increase the maximum default value of the mobile code expiration, please contact sales@idenfy.com or our technical support team via Dashboard. 
 :::
 ### Receiving response
 The response JSON contains exact same fields as JSON during token generation. It also returns default values for fields
@@ -85,7 +85,7 @@ that were optional and not specified during token generation. Additionally, the 
 |---|---|---|---|
 |`message`|A message for a developer about the status of generated token.|- Max length 100|`"Token created successfully"`
 |`authToken`|A unique string for verification process (will be passed as a url parameter when redirecting a client to verification platform).|- Length <= 40|`"3FA5TFPA2ZE3LMPGGS1EGOJNJE"`
-|`scanRef`|A unique string identifying a client verification on Mark ID’s side.|- Length <= 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
+|`scanRef`|A unique string identifying a client verification on iDenfy’s side.|- Length <= 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
 |`clientId`|A unique string identifying a client on your company's side. (The same value when requesting to generate a token)|<br/>- Not null<br/>- Max length 100|`"5F7E4FR14"`
 |`digitString`|A unique string identifying the token that can be used by the client in our mobile application. Will be null if `generateDigitString` is not `true`|-Length = 8|`"89567412"`
 
@@ -112,10 +112,10 @@ Specify all of the parameters for full control.
    "clientId":"100000",
    "firstName":"John Tom",
    "lastName":"Smith",
-   "successUrl":"https://www.my-company.com/markid/success",
-   "errorUrl":"https://www.my-company.com/markid/fail",
-   "unverifiedUrl":"https://www.my-company.com/markid/unverified",
-   "callbackUrl" : "https://mywebsite.com/markid/webhookendpoint",
+   "successUrl":"https://www.my-company.com/idenfy/success",
+   "errorUrl":"https://www.my-company.com/idenfy/fail",
+   "unverifiedUrl":"https://www.my-company.com/idenfy/unverified",
+   "callbackUrl" : "https://mywebsite.com/idenfy/webhookendpoint",
    "locale":"en",
    "showInstructions":true,
    "expiryTime":600,
@@ -141,7 +141,7 @@ Specify all of the parameters for full control.
 ```
 
 #### Example responses
-If supplied data in JSON and ***API key*** with ***API secret*** are valid, you should receive a successful response providing you ***scanRef*** which is the main identifier of a verification in *Mark ID* platform.
+If supplied data in JSON and ***API key*** with ***API secret*** are valid, you should receive a successful response providing you ***scanRef*** which is the main identifier of a verification in *iDenfy* platform.
 
 ##### An example response with all fields provided:
 ```json
@@ -152,10 +152,10 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "clientId": "100000",
    "firstName": "JOHN TOM",
    "lastName": "SMITH",
-   "successUrl": "https://www.my-company.com/markid/success",
-   "errorUrl": "https://www.my-company.com/markid/fail",
-   "unverifiedUrl":"https://www.my-company.com/markid/unverified",
-   "callbackUrl" : "https://mywebsite.com/markid/webhookendpoint",
+   "successUrl": "https://www.my-company.com/idenfy/success",
+   "errorUrl": "https://www.my-company.com/idenfy/fail",
+   "unverifiedUrl":"https://www.my-company.com/idenfy/unverified",
+   "callbackUrl" : "https://mywebsite.com/idenfy/webhookendpoint",
    "locale": "en",
    "showInstructions":true,
    "country": "lt",
@@ -187,7 +187,7 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "utilityBill": false,
    "additionalSteps": null,
    "additionalData": null,
-   "callbackUrl" : "https://mywebsite.com/markid/webhookendpoint"
+   "callbackUrl" : "https://mywebsite.com/idenfy/webhookendpoint"
 }
 ```
 
@@ -248,15 +248,15 @@ You can generate a token with customizable settings, such as liveness face detec
 
 The default values of the settings depend on the environment's configuration. You can freely contact our support team using your Dashboard account to inquire about current and available settings, some of them have to be included in your contract before it can be enabled.
 
-Our sales team at sales@markid.eu will be happy to answer contract related questions and possibilities of including additional services to your environments.
+Our sales team at sales@idenfy.com will be happy to answer contract related questions and possibilities of including additional services to your environments.
 
 Please find the full available list of settings below:
 
 |Setting|Type|Explanation|
 |---|---|---|
 |`checkLiveness`|Bool|Indicates whether to add liveness face detection to the generated token or not.|
-|`reviewSuccessful`|Bool|Indicates if Mark ID manual review team should review successful verifications after the automatic processing.|
-|`reviewFailed`|Bool|Indicates if Mark ID manual review team should review failed verifications after the automatic processing.|
+|`reviewSuccessful`|Bool|Indicates if iDenfy's manual review team should review successful verifications after the automatic processing.|
+|`reviewFailed`|Bool|Indicates if iDenfy's manual review team should review failed verifications after the automatic processing.|
 |`driverLicenseBack`|Bool|An option to allow uploading back side of the driver's license in the verification session.|
 |`autoAmlMonitoring`|Bool|An option to automatically add the verified person to AML monitoring.|
 |`fraudServices`|List|Specify a fraud service to check for the verification. <br/> Possible values:<br/>`AML_NAMES_CHECK`<br/> `LID`<br/> `AML_NEWS`
@@ -287,8 +287,8 @@ Please keep in mind that some of these parameters are already in optimal and tes
 
 :::note
 
-In case of a malformed JSON body or API key/secret mismatch you will receive a standard Mark ID API error response. 
+In case of a malformed JSON body or API key/secret mismatch you will receive a standard iDenfy API error response. 
 
-For more on Mark ID API responses visit Mark ID error messages [Mark ID error messages](/extra/StandardErrorMessages).
+For more on iDenfy API responses visit iDenfy error messages [iDenfy error messages](/pages/faud-prevention-services/StandardErrorMessages).
 
 :::

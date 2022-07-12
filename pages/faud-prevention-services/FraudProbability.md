@@ -12,15 +12,15 @@ This service endpoint estimates fraud probability by analyzing various informati
 
 ### Sending request
 
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/estimate-fraud-probability`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/estimate-fraud-probability`
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.com
-- support@markid.com
-- info@markid.com
+- sales@markid.eu
+- support@markid.eu
+- info@markid.eu
 :::
 
 <br/>

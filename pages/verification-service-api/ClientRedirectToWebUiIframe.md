@@ -9,7 +9,7 @@ nav_order: 4
 # Client redirect to WEB UI iFrame
 ### Redirect action
 
-If you wish to have an iFrame implementation – there is a slightly different approach. You will have to directly insert verification platform URL (https://ui.markid.com/  ) with **authToken** query string parameter into your iframe tag. The **authToken** can be retrieved after [generating a token](/API/GeneratingIdentificationToken).
+If you wish to have an iFrame implementation – there is a slightly different approach. You will have to directly insert verification platform URL (https://ui.markid.eu/  ) with **authToken** query string parameter into your iframe tag. The **authToken** can be retrieved after [generating a token](/API/GeneratingIdentificationToken).
 
 
 The main difference between the regular redirect and iframe implementation is that in iframe, the user can remain in your webpage and complete the verification without opening any additional browser windows.
@@ -42,9 +42,9 @@ Values:<br/>-`lt`(Lithuanian)<br/>-`en`(English)<br/>-`ru`(Russian)<br/>-`pl`(Po
 |`authToken`                           |`3FA5TFPA2ZE3LMPGGS1EGOJNJE`|
 
 
-An example redirect url: <br/> https://ui.markid.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE
+An example redirect url: <br/> https://ui.markid.eu/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE
 
-An example redirect url with english locale: <br/> https://ui.markid.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE&lang=en
+An example redirect url with english locale: <br/> https://ui.markid.eu/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE&lang=en
 
 #### Example code
 
@@ -57,7 +57,7 @@ An example redirect url with english locale: <br/> https://ui.markid.com/?authTo
     id='iframe' 
     allowfullscreen
     style="width:80%; height:800px;" 
-    src="https://ui.markid.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE"
+    src="https://ui.markid.eu/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE"
     allow="camera"
   ></iframe>
   

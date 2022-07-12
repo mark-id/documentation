@@ -15,7 +15,7 @@ If you already have this functionality on your environment, there is a possibili
 
 ### Separate API request data and examples
 
-The request is sent to `https://ivs.markid.com/api/v2/check-gdc-api` and it must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
+The request is sent to `https://ivs.markid.eu/api/v2/check-gdc-api` and it must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
 | Mandatory parameters                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------------------------|
@@ -145,7 +145,7 @@ You will receive HTTP response 200 and JSON body with the following data:
 ```
 
 :::note
-Please contact sales@markid.com to discuss the possibilities of including this service to your workflow.
+Please contact sales@markid.eu to discuss the possibilities of including this service to your workflow.
 
 Technical inquiries should be forwarded to our technical support team via Dashboard. 
 :::

@@ -12,13 +12,13 @@ This service endpoint calculates phone number's risk score and returns additiona
 
 ### Sending request
 
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/validate-phone`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/validate-phone`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.com
+- sales@markid.eu
 - via Dashboard
 :::
 

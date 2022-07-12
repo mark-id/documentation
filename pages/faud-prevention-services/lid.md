@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Lost & Invalid documents
-parent: AML services
+parent: Fraud prevention services
 has_toc: true
-nav_order: 3
+nav_exclude: true
 ---
 
 # Lost & Invalid documents
@@ -14,7 +14,7 @@ This service is available for Republic of Lithuania only.
 :::
 
 :::note  Pricing
-Please contact Mark ID sales team sales@markid.eu for a detailed price-sheet.
+Please contact iDenfy's sales team sales@idenfy.com for a detailed price-sheet.
 :::
 
 #### Callback data

@@ -16,15 +16,15 @@ Call endpoint which will send an SMS message containing verification code to the
 
 ### Sending request
 
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/send-sms`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/send-sms`
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.com
-- support@markid.com
-- info@markid.com
+- sales@markid.eu
+- support@markid.eu
+- info@markid.eu
 :::
 
 <br/>
@@ -76,15 +76,15 @@ After the verification code was sent, the user can enter the code he got, and we
 
 ### Sending request
 
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/verify-sms`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/verify-sms`
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.com
-- support@markid.com
-- info@markid.com
+- sales@markid.eu
+- support@markid.eu
+- info@markid.eu
 :::
 
 <br/>

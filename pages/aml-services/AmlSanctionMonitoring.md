@@ -14,7 +14,7 @@ nav_order: 5
 You can create AML monitoring for users and companies. They will be searched periodically until it reaches the expiration date, which is one year after entry creation. When the information about that user or company is matched with entries from AML databases, a webhook and/or email will be sent to the partner.
 
 ### Sending request
-To add a user to AML monitoring, send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/add-aml-user` 
+To add a user to AML monitoring, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/add-aml-user` 
 
 The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
 
@@ -74,7 +74,7 @@ A successful API call returns a JSON response with *monitoringId*.
 }
 ```
 ### Get monitoring webhook
-To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/get-monitoring-callback` With monitoring ID in the request body.
+To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/get-monitoring-callback` With monitoring ID in the request body.
 
 #### Monitoring user table
 
@@ -175,7 +175,7 @@ To receive webhook data, send a *HTTP POST* request to: `https://ivs.markid.com/
 :::
 
 ### Viewing entries in AML monitoring
-To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.com/api/v2/get-aml-users`
+To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.eu/api/v2/get-aml-users`
 
 ##### Example response:
 
@@ -203,7 +203,7 @@ To view a list of entries, send a *HTTP GET* request to: `https://ivs.markid.com
 If the alert_status has "DECLINED" value, that user is not monitored anymore and the data won't be updated further.
 :::
 ### Deleting an entry
-To delete an entry from monitoring list, send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/delete-monitoring-user/` with monitoring ID in the request body.
+To delete an entry from monitoring list, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/delete-monitoring-user/` with monitoring ID in the request body.
 
 ##### Example request:
 
@@ -220,7 +220,7 @@ A successful API call returns an HTTP response with status 200.
 You can add specific AML checks to the whitelist for a monitored user. AML checks in the whitelist won't be counted as suspected upon detection.
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/add-whitelist` 
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/add-whitelist` 
 
 The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
 
@@ -283,7 +283,7 @@ The request must contain JSON with **whitelist** and one of three identifiers: *
 ```
 
 ### Removing entries from whitelist
-To remove an entry from whitelist, send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/clear-user-whitelist/` with monitoring ID in the request body.
+To remove an entry from whitelist, send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/clear-user-whitelist/` with monitoring ID in the request body.
 
 ##### Example request:
 ```json
@@ -320,7 +320,7 @@ The report contains the following information about the entry:
 * Indicators (probability score, active or not).
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/generate-pdf-aml`
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/generate-pdf-aml`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 The request must contain JSON with parameter:
@@ -351,7 +351,7 @@ Only one entry is accepted per request.
 You can search form AML sanctions.
 
 ### Sending request
-Send a *HTTP Post* request to: `https://ivs.markid.com/api/v2/check-aml-sanctions` 
+Send a *HTTP Post* request to: `https://ivs.markid.eu/api/v2/check-aml-sanctions` 
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 

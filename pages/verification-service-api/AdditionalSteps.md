@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Using this functionality will let you add additional steps for your users to complete in the verification process. These steps could include utility bill upload or an extra photo of your client. The text can be fully customizable.
 
 :::note
-To make this functionality available, please contact sales@markid.com if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account. 
+To make this functionality available, please contact sales@markid.eu if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account. 
 :::
 
 ### Utility bill
@@ -143,7 +143,7 @@ The utility bill JSON text, settings, document types and locales can be changed 
 You can add a requirement for your users to upload an additional photo. For example, a selfie of the user while holding their document next to them or a photo where the client holds a piece of paper with handwritten text that you specify. The text of the required additional step is fully customizable.
 
 ### Sending request for additional steps
-To [generate a token](GeneratingIdentificationToken) with a custom additional step, add `additionalSteps` with a valid JSON to your request and send a HTTP POST request to: https://ivs.markid.com/api/v2/token
+To [generate a token](GeneratingIdentificationToken) with a custom additional step, add `additionalSteps` with a valid JSON to your request and send a HTTP POST request to: https://ivs.markid.eu/api/v2/token
 
 The request must contain basic auth headers where username is API key and password is API secret.
 
@@ -181,7 +181,7 @@ You can also include **SSN**(Social Security Number) check with `additionalData`
 Please contact Mark ID sales team to discuss the possibilities of including these features in your environments.
 
 #### Example request:
-To [generate a token](GeneratingIdentificationToken) with a custom additional step and `additionalData`, add `additionalSteps` with a valid JSON to your request and send a HTTP POST request to: `https://ivs.markid.com/api/v2/token`
+To [generate a token](GeneratingIdentificationToken) with a custom additional step and `additionalData`, add `additionalSteps` with a valid JSON to your request and send a HTTP POST request to: `https://ivs.markid.eu/api/v2/token`
 
 The request must contain basic auth headers where username is API key and password is API secret.
 
@@ -301,7 +301,7 @@ Using the generated token above, your user will now be able to upload their proo
 
 If your user uploaded an invalid additional step, for example, a utility bill that is older than 3 months, there is a possibility to reupload the file without the need of undergoing the verification process again.
 
-This can be done by sending an HTTP request to this endpoint `https://ivs.markid.com/api/v2/upload-additional-step`
+This can be done by sending an HTTP request to this endpoint `https://ivs.markid.eu/api/v2/upload-additional-step`
 
 The request must contain basic auth headers where username is API key and password is API secret.
 
@@ -318,7 +318,7 @@ The request must contain basic auth headers where username is API key and passwo
 `additionalData` is not required. However, you can pass values like {"address": "some address"} that our manual review team will use for comparison. Any data from the previous verification will be overriden after the new request.
 
 :::note
-Requests sent to the `https://ivs.markid.com/api/v2/upload-additional-step` endpoint will only work if the provided `scanRef` had custom additional steps provided in token generation.
+Requests sent to the `https://ivs.markid.eu/api/v2/upload-additional-step` endpoint will only work if the provided `scanRef` had custom additional steps provided in token generation.
 :::
 
 ### Value explanation

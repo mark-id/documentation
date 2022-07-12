@@ -17,15 +17,15 @@ This check can be enabled to be checked before sending a [result webhook](/pages
 
 ### Sending request
 
-Send a *HTTP Post* request to: `https://ivs.markid.com/fraud/proxy-check`
+Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/proxy-check`
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.com
-- support@markid.com
-- info@markid.com
+- sales@markid.eu
+- support@markid.eu
+- info@markid.eu
 :::
 
 <br/>

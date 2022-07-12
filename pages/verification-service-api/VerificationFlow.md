@@ -36,7 +36,7 @@ Country selection, document selection, and instructions screens are accompanied 
 :::note
 Document selection skipping will work only if available documents array size is 1, e.g, you allow only PASSPORT for this specific verification session.
 
-To enable skipping of a certain screen or step, forward your request to techsupport@markid.com
+To enable skipping of a certain screen or step, forward your request to techsupport@markid.eu
 :::
 
 ### Forcing specific language
@@ -57,7 +57,7 @@ The final results will include `"final":true` flag inside the webhook's body.
 
 ### Redirection to a URL
 
-After the processing is finished, you can pass any of the below parameters with your URLs inside your session token request [request](/API/GeneratingIdentificationToken#sending-request) or add them inside your [environment's](https://admin.markid.com) configuration so every generated session will already have these URL settings without specifying the parameters with API requests.
+After the processing is finished, you can pass any of the below parameters with your URLs inside your session token request [request](/API/GeneratingIdentificationToken#sending-request) or add them inside your [environment's](https://admin.markid.eu) configuration so every generated session will already have these URL settings without specifying the parameters with API requests.
 
 - `successUrl` A URL where the client will be redirected after a successful verification.
 
@@ -76,5 +76,5 @@ Immediate redirect can be turned on if you want your users to be redirected back
 With this option turned on, your user will be immediately redirected to "unverifiedUrl" after they submit the verification. This way they won't be waiting for automatic check results. This option is used together with immediate redirect.
 
 :::note
-If you do not use our API, you can still [create the sessions](/tutorials/admin-platform/GenerateIdentificationToken) with the same parameters described above through [Mark ID administration platform](https://admin.markid.com).
+If you do not use our API, you can still [create the sessions](/tutorials/admin-platform/GenerateIdentificationToken) with the same parameters described above through [Mark ID administration platform](https://admin.markid.eu).
 :::

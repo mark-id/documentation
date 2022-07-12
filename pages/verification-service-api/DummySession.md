@@ -20,7 +20,7 @@ If you want to test the flow in the UI, please use the redirection methods - [Re
 You can generate a token with dummy auto status and receive a webhook with auto results.
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/token`
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/token`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
@@ -104,7 +104,7 @@ Successful API call returns a JSON response with *scanRef*, that can be used to 
 You can add a dummy manual status for the verification in development environment and receive the same webhook as it would after the manual review.
 
 ### Sending request
-Send a *HTTP POST* request to: `https://ivs.markid.com/api/v2/add-dummy-status` 
+Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/add-dummy-status` 
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
