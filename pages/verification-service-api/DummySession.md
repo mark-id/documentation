@@ -12,7 +12,7 @@ You can generate a token with dummy auto status and add dummy manual status for 
 
 :::note
 Dummy session for developers is used to test the API with various statuses and receive a webhook without the need to go through the process in the UI.
-If you want to test the flow in the UI, please use the redirection methods - [Redirection to WEB UI](/integration/ClientRedirectToWebUi) or [Redirection using iframe](/integration/ClientRedirectToWebUiIframe) without the `dummyStatus` parameter.
+If you want to test the flow in the UI, please use the redirection methods - [Redirection to WEB UI](/pages/verification-service-api/ClientRedirectToWebUi) or [Redirection using iframe](/pages/verification-service-api/ClientRedirectToWebUiIframe) without the `dummyStatus` parameter.
 :::
 
 ## Dummy auto result
@@ -28,11 +28,11 @@ The request must contain *basic auth* headers where *username* is *API key* and 
 You should have a development environment, otherwise neither a simple token, nor token with dummy auto status will be created.
 :::
 
-The request must contain the same parameters as [token generation](/API/GeneratingIdentificationToken##sending-request) and *dummyStatus*, which defines dummy session's auto result.
+The request must contain the same parameters as [token generation](/pages/verification-service-api/GeneratingIdentificationToken##sending-request) and *dummyStatus*, which defines dummy session's auto result.
 
 |JSON key        |Type    |Constraints      |Explanation|
 |----------------|--------|-----------------|-----------|
-|`dummyStatus`   |`String`|- Max length 30  |Auto status of the verification. <br/>Possible values:<br/>- APPROVED <br/>- DENIED<br/>- SUSPECTED<br/>- ACTIVE<br/>- EXPIRED<br/>[For value explanations refer to status vocabulary](/extra/Vocabulary#verification-status-values-vocabulary).      
+|`dummyStatus`   |`String`|- Max length 30  |Auto status of the verification. <br/>Possible values:<br/>- APPROVED <br/>- DENIED<br/>- SUSPECTED<br/>- ACTIVE<br/>- EXPIRED<br/>[For value explanations refer to status vocabulary](/pages/fraud-prevention-services/Vocabulary#verification-status-values-vocabulary).      
 
 #### Example request 
 
@@ -117,8 +117,8 @@ The request must contain JSON with these parameters:
 |Key                      |Type    |Constraints |Explanation|
 | ------------------------| ------ | ---------- | --------- | 
 |`scanRef`                |`List`  |-           |A unique string identifying a client verification.|
-|`manualFaceMatchResult`  |`String`|- Max length 30 |Dummy manual face status. <br/>Possible values:<br/>- FACE_MATCH<br/>- FACE_MISMATCH<br/>- NO_FACE_FOUND<br/>- TOO_MANY_FACES<br/>- FACE_TOO_BLURRY<br/>- FACE_UNCERTAIN<br/>- FACE_NOT_ANALYSED<br/>- FACE_ERROR<br/>- AUTO_UNVERIFIABLE<br/>- FAKE_FACE<br/>[For value explanations refer to status vocabulary](/extra/Vocabulary#verification-status-values-vocabulary).|
-|`manualDocumentValidity` |`String`|- Max length 30  |Dummy manual document status. <br/>Possible values:<br/>- DOC_VALIDATED<br/>- DOC_INFO_MISMATCH<br/>- DOC_NOT_FOUND<br/>- DOC_NOT_FULLY_VISIBLE<br/>- DOC_NOT_SUPPORTED<br/>- DOC_FACE_NOT_FOUND<br/>- DOC_TOO_BLURRY<br/>- DOC_FACE_GLARED<br/>- MRZ_NOT_FOUND<br/>- MRZ_OCR_READING_ERROR<br/>- BARCODE_NOT_FOUND<br/>- DOC_EXPIRED<br/>- COUNTRY_MISMATCH<br/>- DOC_TYPE_MISMATCH<br/>- DOC_DAMAGED<br/>- DOC_FAKE<br/>- DOC_ERROR<br/>- AUTO_UNVERIFIABLE<br/>- DOC_NOT_ANALYSED<br/>- DOC_NAME_ERROR<br/>- DOC_SURNAME_ERROR<br/>- DOC_EXPIRY_ERROR<br/>- DOC_DOB_ERROR<br/>- DOC_PERSONAL_NUMBER_ERROR<br/>- DOC_NUMBER_ERROR<br/>- DOC_DATE_OF_ISSUE_ERROR<br/>- DOC_SEX_ERROR<br/>- DOC_NATIONALITY_ERROR<br/>[For value explanations refer to status vocabulary](/extra/Vocabulary#verification-status-values-vocabulary)|
+|`manualFaceMatchResult`  |`String`|- Max length 30 |Dummy manual face status. <br/>Possible values:<br/>- FACE_MATCH<br/>- FACE_MISMATCH<br/>- NO_FACE_FOUND<br/>- TOO_MANY_FACES<br/>- FACE_TOO_BLURRY<br/>- FACE_UNCERTAIN<br/>- FACE_NOT_ANALYSED<br/>- FACE_ERROR<br/>- AUTO_UNVERIFIABLE<br/>- FAKE_FACE<br/>[For value explanations refer to status vocabulary](/pages/fraud-prevention-services/Vocabulary#verification-status-values-vocabulary).|
+|`manualDocumentValidity` |`String`|- Max length 30  |Dummy manual document status. <br/>Possible values:<br/>- DOC_VALIDATED<br/>- DOC_INFO_MISMATCH<br/>- DOC_NOT_FOUND<br/>- DOC_NOT_FULLY_VISIBLE<br/>- DOC_NOT_SUPPORTED<br/>- DOC_FACE_NOT_FOUND<br/>- DOC_TOO_BLURRY<br/>- DOC_FACE_GLARED<br/>- MRZ_NOT_FOUND<br/>- MRZ_OCR_READING_ERROR<br/>- BARCODE_NOT_FOUND<br/>- DOC_EXPIRED<br/>- COUNTRY_MISMATCH<br/>- DOC_TYPE_MISMATCH<br/>- DOC_DAMAGED<br/>- DOC_FAKE<br/>- DOC_ERROR<br/>- AUTO_UNVERIFIABLE<br/>- DOC_NOT_ANALYSED<br/>- DOC_NAME_ERROR<br/>- DOC_SURNAME_ERROR<br/>- DOC_EXPIRY_ERROR<br/>- DOC_DOB_ERROR<br/>- DOC_PERSONAL_NUMBER_ERROR<br/>- DOC_NUMBER_ERROR<br/>- DOC_DATE_OF_ISSUE_ERROR<br/>- DOC_SEX_ERROR<br/>- DOC_NATIONALITY_ERROR<br/>[For value explanations refer to status vocabulary](/pages/fraud-prevention-services/Vocabulary#verification-status-values-vocabulary)|
 
 For approved verification you need to give *FACE_MATCH* and *DOC_VALIDATED* statuses.
 

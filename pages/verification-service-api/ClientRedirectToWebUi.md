@@ -10,7 +10,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 #  Client redirect to WEB UI
 
-After successfully [generating a token](/API/GeneratingIdentificationToken) you should have a valid **authToken** that looks similarly to this:
+After successfully [generating a token](/pages/verification-service-api/GeneratingIdentificationToken) you should have a valid **authToken** that looks similarly to this:
 
 *"tSfnDiNBT16iP7ThpP6K8QfF2maTK0Vvkxfvq4YV"*.
 
@@ -56,4 +56,3 @@ app = Flask(__name__)
 def redirect_to_markid():
     return redirect("https://ivs.markid.eu/api/v2/redirect?authToken=tSfnDiNBT16iP7ThpP6K8QfF2maTK0Vvkxfvq4YV", code=302)
 ```
-A full python flask example can be found [here](/tutorials/api-integration/PythonFlaskRedirectExample)

@@ -9,7 +9,7 @@ nav_order: 4
 # Client redirect to WEB UI iFrame
 ### Redirect action
 
-If you wish to have an iFrame implementation – there is a slightly different approach. You will have to directly insert verification platform URL (https://ui.markid.eu/  ) with **authToken** query string parameter into your iframe tag. The **authToken** can be retrieved after [generating a token](/API/GeneratingIdentificationToken).
+If you wish to have an iFrame implementation – there is a slightly different approach. You will have to directly insert verification platform URL (https://ui.markid.eu/  ) with **authToken** query string parameter into your iframe tag. The **authToken** can be retrieved after [generating a token](/pages/verification-service-api/GeneratingIdentificationToken).
 
 
 The main difference between the regular redirect and iframe implementation is that in iframe, the user can remain in your webpage and complete the verification without opening any additional browser windows.
@@ -20,7 +20,7 @@ After the process is finished, you may close the iframe and display a desired pa
 
 
 :::important 
-* Do not use `successUrl`, `errorUrl`, `unverifiedUrl` in [token generation](/API/GeneratingIdentificationToken)
+* Do not use `successUrl`, `errorUrl`, `unverifiedUrl` in [token generation](/pages/verification-service-api/GeneratingIdentificationToken)
 for iframe implementation. Using the mentioned parameters may break the flow.
 
 * Locale parameter in token generation will have no effect in iFrame.

@@ -86,6 +86,6 @@ Failed API calls will return a message identifying the problem.
 
 :::note
 
-Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *Mark ID* API error response. For more on *Mark ID* API responses visit [Mark ID error messages](/extra/StandardErrorMessages).
+Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *Mark ID* API error response. For more on *Mark ID* API responses visit [Mark ID error messages](/pages/fraud-prevention-services/StandardErrorMessages).
 
 :::

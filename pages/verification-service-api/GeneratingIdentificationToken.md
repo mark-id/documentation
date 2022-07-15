@@ -47,9 +47,9 @@ The request must contain JSON with optional and mandatory parameters:
 |`clientId`|Yes|A unique string identifying a client.|String|<br/>- Not null<br/>- Max length 100|-|
 |`firstName`|No|A name(s) of a client to be identified.|String|<br/>- Min length 1<br/>- Max length 100 <br/>- Not digits <br/>- Not characters: ```~!@#$%^*()_+={}[]\|:;",<>/?```|-|
 |`lastName`|No|A surname(s) of a client to be identified.|String|<br/>- Min length 1<br/>- Max length 100 <br/>- Not digits <br/>- Not characters: ```~!@#$%^*()_+={}[]\|:;",<>/?```|-|
-|`successUrl`|No|A url where a client will be redirected after a successful verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=success`|
-|`errorUrl`|No|A url where a client will be redirected after a failed verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=fail`|
-|`unverifiedUrl`|No|A url where a client will be redirected after a not analyzed verification. E.g. user immediately cancels process.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/integration/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=unverified`|
+|`successUrl`|No|A url where a client will be redirected after a successful verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=success`|
+|`errorUrl`|No|A url where a client will be redirected after a failed verification.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=fail`|
+|`unverifiedUrl`|No|A url where a client will be redirected after a not analyzed verification. E.g. user immediately cancels process.|String|<br/>- Min length 5<br/> - Max length 2048<br/> - Cannot be used with [iframe implementation](/pages/verification-service-api/ClientRedirectToWebUiIframe)|`https://ui.markid.eu/result?status=unverified`|
 |`locale`|No|A country code in alpha-2 format. Determines what default language a client will see in verification UI.|String|Values:<br/>-`lt`(Lithuanian)<br/>-`en`(English)<br/>-`ru`(Russian)<br/>-`pl`(Polish)<br/>-`lv`(Latvian)<br/>-`ro`(Romanian)<br/>-`it`(Italian)<br/>-`de`(German)<br/>-`fr`(French)<br/>-`sv`(Swedish)<br/>-`es`(Spanish)<br/>-`hu`(Hungarian)<br/>-`ja`(Japanese)<br/>-`bg`(Bulgarian)<br/>-`et`(Estonian)<br/>-`cs`(Czech)|`en`|
 |`showInstructions`|No|Indicates whether instructions should be shown.|Bool|-|`true`|
 |`expiryTime`|No|Length of time in seconds after which a newly generated token will become invalid.|Integer|<br/>- More than 0<br/>- Not exceeding 2592000 (30 days)|`86400`|
@@ -70,7 +70,7 @@ The request must contain JSON with optional and mandatory parameters:
 |`externalRef`|No|An unique string for external reference to link the client to you and the Mark ID system better.|String|- Length <= 40|`null`|
 |`utilityBill`|No|Require your users to upload a utility bill as an additional step in the verification.|Bool|Can't be used together with `additionalSteps`|`false`|
 |`additionalSteps`|No|Require your users to upload additional photos in their verification process. Please refer to [**this**](AdditionalSteps) manual page for detailed information about additional steps.|JSON object|Valid JSON. Can't be used together with `utilityBill`|`null`|
-|`additionalData`|No|Additional data provided alongside any [additionalSteps](/API/AdditionalSteps), for example - Social Security Number in `UTILITY_BILL`|JSON object|Must be used with [additionalSteps](/API/AdditionalSteps)|`null`|
+|`additionalData`|No|Additional data provided alongside any [additionalSteps](/pages/verification-service-api/AdditionalSteps), for example - Social Security Number in `UTILITY_BILL`|JSON object|Must be used with [additionalSteps](/pages/verification-service-api/AdditionalSteps)|`null`|
 |`callbackUrl`|No|A webhook endpoint for the generated session.|String|Must be HTTPS URL, requires permissions enabled(contact tech support via dashboard if the request is refused).|-|
 
 :::note
@@ -289,6 +289,6 @@ Please keep in mind that some of these parameters are already in optimal and tes
 
 In case of a malformed JSON body or API key/secret mismatch you will receive a standard Mark ID API error response. 
 
-For more on Mark ID API responses visit Mark ID error messages [Mark ID error messages](/extra/StandardErrorMessages).
+For more on Mark ID API responses visit Mark ID error messages [Mark ID error messages](/pages/fraud-prevention-services/StandardErrorMessages).
 
 :::
