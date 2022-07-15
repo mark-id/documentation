@@ -23,7 +23,8 @@ You may initiate a HTTP redirect action for your client to `https://ivs.markid.e
 |--------------------------------------|----------------------------|
 |`authToken`                           |`tSfnDiNBT16iP7ThpP6K8QfF2maTK0Vvkxfvq4YV`|
 
-<img alt="Flow" width="1000" src={useBaseUrl('img/redirectionFlow.png')} />
+
+<img alt="Flow" width="1000" src='https://documentation.markid.eu/resources/redirectionFlow.png' />
 
 ### Examples
 
@@ -32,6 +33,7 @@ An example redirect URL looks like this: <br/>
 
 And after the redirection, the user will see our identity verification UI:
 
+<img alt="preview" width="1000" src='https://documentation.markid.eu/resources/UI-preview.png' />
 <img alt="preview" width="1000" src={useBaseUrl('img/UI-preview.png')} />
 
 

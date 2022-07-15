@@ -12,6 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Mark ID identity verification sessions can be configured with different flows that allows additional flexibility on the default flow that is displayed below:
 
+<img alt="Full flow" width="700" src='https://documentation.markid.eu/resources//defaultFlow.gif' />
 <img alt="Full flow" width="700" src={useBaseUrl('/img/preview/defaultFlow.gif')} />
 
 
@@ -51,7 +52,7 @@ With manual review enabled, it is the final step of the verification when the cl
 Manual review can override Mark ID automatic check results, and correct OCR errors, if there are any.
 In comparison with the automatic check, the manual review may make the process longer(an average verification is reviewed within 3-5 minutes), but it is highly recommended to keep the manual review for security purposes.
 
-You can choose if you need to receive 1 or 2 [webhooks](/callbacks/ResultCallback). With only 1 webhook, you will receive only the final results of each verification. With 2 webhooks, you can receive preliminary(auto reviewed) results, and final(manually revied) results.
+You can choose if you need to receive 1 or 2 [webhooks](/pages/verification-service-api/ResultCallback). With only 1 webhook, you will receive only the final results of each verification. With 2 webhooks, you can receive preliminary(auto reviewed) results, and final(manually revied) results.
 This will enable more flexibility on how you would like to handle the onboarding process and perhaps providing limited access to the user before the final results arrive.
 The final results will include `"final":true` flag inside the webhook's body.
 

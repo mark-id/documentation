@@ -12,7 +12,7 @@ This service checks the IP address and returns its risk level
 
 ### Callback
 
-This check can be enabled to be checked before sending a [result webhook](/pages/faud-prevention-services/ResultCallback) and this check results would be in the `data` table's `clientIpProxyRiskLevel` field of the webhook.
+This check can be enabled to be checked before sending a [result webhook](/pages/fraud-prevention-services/ResultCallback) and this check results would be in the `data` table's `clientIpProxyRiskLevel` field of the webhook.
 
 
 ### Sending request

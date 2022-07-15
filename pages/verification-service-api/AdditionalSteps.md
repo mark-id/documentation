@@ -294,7 +294,7 @@ After a successful request, you will receive a status 201(created) and a JSON bo
 ```
 
 :::note
-Using the generated token above, your user will now be able to upload their proof of address document and our manual review team will be able to extract or compare the ***SSN*** and/or ***Address***. Please refer to the value explanations below and expected webhook callback response information that can be found [here](/callbacks/ResultCallback).
+Using the generated token above, your user will now be able to upload their proof of address document and our manual review team will be able to extract or compare the ***SSN*** and/or ***Address***. Please refer to the value explanations below and expected webhook callback response information that can be found [here](/pages/verification-service-api/ResultCallback).
 :::
 
 ### Additional step reupload
@@ -350,6 +350,7 @@ After generating a token using the example above, your user will see additional 
 
 
 <p align="center">
+  <img src='https://documentation.markid.eu/resources/ADDITIONALSTEP.png' alt="Additional Steps" width="450"/>
   <img src={useBaseUrl('/img/UI/ADDITIONALSTEP.png')} alt="Additional Steps" width="450"/>
 </p>
 

@@ -103,7 +103,7 @@ A "400 Bad Request" with a message "Partner reached token limit." And identifier
 ## Webhook FAQ's
 
 - ##### I am not receiving a webhook. Why?
-Please check the [Callback troubleshooting](/pages/faud-prevention-services/CallbackSigning#callback-troubleshooting) section. 
+Please check the [Callback troubleshooting](/pages/fraud-prevention-services/CallbackSigning#callback-troubleshooting) section. 
 
 - ##### How do I differentiate which (manual or automatic) verification a webhook represents?
 Within received webhook look for 'status' entry.

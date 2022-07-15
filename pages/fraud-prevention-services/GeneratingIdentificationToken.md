@@ -21,6 +21,7 @@ If you have ***API key*** and ***API secret*** you can create a verification tok
 
 ### Graphical representation of token generation (UML activity)
 
+<img alt="Token generation UML activity diagram" width="450" src='https://documentation.markid.eu/resources/TokenGenerationUmlActivityDiagram.jpg' />
 <img alt="Token generation UML activity diagram" width="450" src={useBaseUrl('img/TokenGenerationUmlActivityDiagram.jpg')} />
 
 ### Sending request
@@ -32,7 +33,7 @@ The request must contain *basic auth* headers where *username* is *API key* and 
 #### We recommend:
 Provide only clientId value while generating a token. 
 Do not provide whole client information. Often clients make mistakes and cannot pass the verification successfully.
-Use client information (name, surname and etc.) from our system's [webhook](/pages/faud-prevention-services/ResultCallback). This would prevent errors and improve user experience.
+Use client information (name, surname and etc.) from our system's [webhook](/pages/fraud-prevention-services/ResultCallback). This would prevent errors and improve user experience.
 
 :::caution
 
@@ -289,6 +290,6 @@ Please keep in mind that some of these parameters are already in optimal and tes
 
 In case of a malformed JSON body or API key/secret mismatch you will receive a standard iDenfy API error response. 
 
-For more on iDenfy API responses visit iDenfy error messages [iDenfy error messages](/pages/faud-prevention-services/StandardErrorMessages).
+For more on iDenfy API responses visit iDenfy error messages [iDenfy error messages](/pages/fraud-prevention-services/StandardErrorMessages).
 
 :::

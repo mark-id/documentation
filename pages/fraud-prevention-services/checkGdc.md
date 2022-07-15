@@ -10,7 +10,7 @@ nav_order: 5
 
 This service is used to verify person’s identity data against the databases from more than 200 government and commercial sources.
 
-If you already have this functionality on your environment, there is a possibility to get automatic check. It compares provided information and entries from databases of global data sources. In your [webhook callback](/pages/faud-prevention-services/ResultCallback), you will receive a field - `gdcMatch` that can have values - `true`, `false` or `null`. 
+If you already have this functionality on your environment, there is a possibility to get automatic check. It compares provided information and entries from databases of global data sources. In your [webhook callback](/pages/fraud-prevention-services/ResultCallback), you will receive a field - `gdcMatch` that can have values - `true`, `false` or `null`. 
 
 
 ### Separate API request data and examples
