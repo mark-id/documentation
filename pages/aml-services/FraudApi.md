@@ -71,9 +71,9 @@ If `LID` service is specified in `services` and `mode` is specified as `DATA` - 
  ### Receiving response
 |Key       |Type         |Explanation|
 |----------|-------------|-----------|
-|`AML`     |`List[Dict]` |Fraud check results from AML services. If `AML` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [AML documentation](/fraud/aml).|
-|`LID`     |`List[Dict]` |Fraud check results from LID services. If `LID` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [LID documentation](/fraud/lid).|
-|`COMPANY` |`List[Dict]` |Fraud check results from COMPANY services. If `COMPANY` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [COMPANY documentation](/fraud/company).|
+|`AML`     |`List[Dict]` |Fraud check results from AML services. If `AML` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [AML documentation](/pages/faud-prevention-services/aml).|
+|`LID`     |`List[Dict]` |Fraud check results from LID services. If `LID` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [LID documentation](/pages/faud-prevention-services/lid).|
+|`COMPANY` |`List[Dict]` |Fraud check results from COMPANY services. If `COMPANY` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [COMPANY documentation](/pages/aml-services/company).|
 
 ## Examples
 
