@@ -351,7 +351,6 @@ After generating a token using the example above, your user will see additional 
 
 <p align="center">
   <img src='https://documentation.markid.eu/resources/ADDITIONALSTEP.png' alt="Additional Steps" width="450"/>
-  <img src={useBaseUrl('/img/UI/ADDITIONALSTEP.png')} alt="Additional Steps" width="450"/>
 </p>
 
 :::note

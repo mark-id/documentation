@@ -22,7 +22,6 @@ If you have ***API key*** and ***API secret*** you can create a verification tok
 ### Graphical representation of token generation (UML activity)
 
 <img alt="Token generation UML activity diagram" width="450" src='https://documentation.markid.eu/resources/TokenGenerationUmlActivityDiagram.jpg' />
-<img alt="Token generation UML activity diagram" width="450" src={useBaseUrl('img/TokenGenerationUmlActivityDiagram.jpg')} />
 
 ### Sending request
 Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/token` 

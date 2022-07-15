@@ -34,7 +34,6 @@ An example redirect URL looks like this: <br/>
 And after the redirection, the user will see our identity verification UI:
 
 <img alt="preview" width="1000" src='https://documentation.markid.eu/resources/UI-preview.png' />
-<img alt="preview" width="1000" src={useBaseUrl('img/UI-preview.png')} />
 
 
 #### PHP example

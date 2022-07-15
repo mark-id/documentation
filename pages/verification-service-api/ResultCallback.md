@@ -42,7 +42,6 @@ Default callback is represented in a UML activity graph below:
 
 
 <img alt="Token generation UML activity diagram" width="600" src='https://documentation.markid.eu/resources/Default_Callback.png' />
-<img alt="Token generation UML activity diagram" width="600" src={useBaseUrl('img/callbacks/Default_Callback.png')} />
 
 1. Generate a token by sending an HTTP POST request to `https://ivs.markid.eu/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
   
@@ -82,7 +81,6 @@ In default flow (steps 1, 2, 3, 4, 5, 6, 7) You would get only one callback with
 Callback with automatic callback are represented in a UML activity graph below:
 
 <img alt="Token generation UML activity diagram" width="600" src='https://documentation.markid.eu/resources/Default_Callback_with_auto.png' />
-<img alt="Token generation UML activity diagram" width="600" src={useBaseUrl('img/callbacks/Default_Callback_with_auto.png')} />
 
 
 1. Generate a token by sending an HTTP POST request to `https://ivs.markid.eu/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
