@@ -11,7 +11,7 @@ nav_exclude: true
 This service checks whether given person is in PEP or sanctions list, checks adverse media.
 
 :::note  Pricing
-Please contact iDenfy's sales team sales@idenfy.com for a detailed price-sheet.
+Please contact Mark ID's sales team sales@Mark ID.com for a detailed price-sheet.
 :::
 
 ## Callback data

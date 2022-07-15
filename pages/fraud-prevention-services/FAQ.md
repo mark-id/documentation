@@ -28,7 +28,7 @@ By default every single automatically verified verification is reviewed once mor
 by our manual reviewers. This behaviour can be altered by your custom needs.
 
 - ##### How do I know when verification was verified manually/automatically?
-After a finished verification process in iDenfy platform you will be notified via email
+After a finished verification process in Mark ID platform you will be notified via email
 and/or a HTTP call to you custom API endpoint. By default you can expect one notification 
 (if a verification is reviewed only manually) or two notifications (first one is from
 automatic and the second one is from manual verifications). Manual verification notification
@@ -45,7 +45,7 @@ verification process e.g. printed document or a face from mobile screen, etc. In
 verification is set with overall status as "SUSPECTED". We leave the decision to our partners whether to onboard users with "SUSPECTED" status or not.
 
 :::note
-If you use our AML services, iDenfy's system automatically checks the name, surname, date of birth of the user after a completed, successful verification and compares the information against the AML database. If there is a match from the database, the user's verification is also set with an overall status as "SUSPECTED" with all the results displayed in the verification pop-up or webhook. 
+If you use our AML services, Mark ID's system automatically checks the name, surname, date of birth of the user after a completed, successful verification and compares the information against the AML database. If there is a match from the database, the user's verification is also set with an overall status as "SUSPECTED" with all the results displayed in the verification pop-up or webhook. 
 :::
 
 - ##### What does "AUTO_UNVERIFIABLE" mean and when is it triggered?
@@ -70,10 +70,10 @@ not in PEP sanctions list.
 ## Verification flow FAQ's
 
 - ##### I see that a user has done a second verification even though the previous one was successful. Why is he allowed to do further verifications?
-Because iDenfy platform does not track individual people that come to identify themselves.
-iDenfy tracks only verifications and each verification has a unique number. 
+Because Mark ID platform does not track individual people that come to identify themselves.
+Mark ID tracks only verifications and each verification has a unique number. 
 Therefore you should ensure on your side that a client is not allowed to do 
-an additional verification after a successful one. Also, iDenfy recommends 
+an additional verification after a successful one. Also, Mark ID recommends 
 restricting token generation for user if a previous one is not yet expired. 
 
 - ##### When verification process is complete?
@@ -98,7 +98,7 @@ in the platform. After 10 minutes a client will see an internal “session expir
 We accept any type of characters (Latin and non-Latin).
 
 - ##### Why am I receiving "Partner reached token limit." Error when generating a token?
-A "400 Bad Request" with a message "Partner reached token limit." And identifier "PERMISSIONS_ERROR" when trying to generate a token means that your environment has run out of verification tokens. Please contact techsupport@idenfy.com to resolve the issue.
+A "400 Bad Request" with a message "Partner reached token limit." And identifier "PERMISSIONS_ERROR" when trying to generate a token means that your environment has run out of verification tokens. Please contact techsupport@Mark ID.com to resolve the issue.
 
 ## Webhook FAQ's
 
@@ -113,14 +113,14 @@ automatic verification. If `manualDocument` with `manualFace` fields are not emp
 it means the webhook represents manual verification.
 
 - ##### What happens if my provided webhook endpoint is not accessible temporary?
-iDenfy API will repeat a call once. If both times there was an error a "failed webhook"
+Mark ID API will repeat a call once. If both times there was an error a "failed webhook"
 state is associated with the verification. If user has successfully identified himself
 and webhook has failed, a user will see an information popup, where it states that 
 verification succeeded but there was an issue saving data. Also, a user will be 
 redirected to a failure page.
 
 - ##### Do you repeat webhook sending?
-Yes. iDenfy API will repeat a call once (after 0.5 seconds) if the initial webhook sending has failed. If the second webhook fails - an associated verification is flaged with "webhook failed" state.
+Yes. Mark ID API will repeat a call once (after 0.5 seconds) if the initial webhook sending has failed. If the second webhook fails - an associated verification is flaged with "webhook failed" state.
 
 - ##### How many webhooks to expect?
 If your verifications are processed only automatically - just one - after processing is done. 
@@ -151,5 +151,5 @@ When using an `iframe` tag, make sure to add an attribute `allow="camera"`.
 
 :::note
 There can be custom roles applied to a manager as well. If you need to restrict or provide more access to the accounts in your environment,
-contact techsupport@idenfy.com with your request to change or add new roles.
+contact techsupport@Mark ID.com with your request to change or add new roles.
 :::

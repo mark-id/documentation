@@ -40,27 +40,27 @@ Default callback is represented in a UML activity graph below:
 
 <img alt="Token generation UML activity diagram" width="600" src='https://documentation.markid.eu/resources/Default_Callback.png' />
 
-1. Generate a token by sending an HTTP POST request to `https://ivs.idenfy.com/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
+1. Generate a token by sending an HTTP POST request to `https://ivs.Mark ID.com/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
   
   More information can be found [here](/pages/fraud-prevention-services/GeneratingIdentificationToken).
   
-2. Redirect client to iDenfy platform. It can be done in several ways:
+2. Redirect client to Mark ID platform. It can be done in several ways:
     - Client redirect to verification WEB platform
     - Client redirect to verification WEB platform (iFrame)
     - iOS SDK
     - Android SDK
 3. Client submits all documents (tries to verify at least one time).  
   
-  3.1. If a client doesn't upload all photos at least one time, for example, face photos are missing and only the document’s photo are captured after session time expires iDenfy system will send a callback about expired notification to the provided URL with overall status: ”EXPIRED”.
+  3.1. If a client doesn't upload all photos at least one time, for example, face photos are missing and only the document’s photo are captured after session time expires Mark ID system will send a callback about expired notification to the provided URL with overall status: ”EXPIRED”.
 
 4. The client completes the verification process. 
 When the verification process is complete, please check [here](/pages/fraud-prevention-services/FAQ#when-verification-process-is-complete).
 
-  4.1. If a client captures all photos at least one time, but verification was unsuccessful while more attempts are available after session time expires iDenfy system will send a callback about expired notification to the provided URL with overall status: ”DENIED”.
+  4.1. If a client captures all photos at least one time, but verification was unsuccessful while more attempts are available after session time expires Mark ID system will send a callback about expired notification to the provided URL with overall status: ”DENIED”.
 
 5. After the verification process is completed or 4.1 callback sent we will perform full document analysis by automated system and human supervision. The Analysis process can take up to 20 minutes (on average about 10 minutes).
 6. After the analysis process is done, we are sending all data to the registered callback URL.
-7. Receiving all data sent by iDenfy to your provided endpoint.
+7. Receiving all data sent by Mark ID to your provided endpoint.
 8. Returning HTTP status code 200.
   
   8.1. HTTP status code is not 200. Trying to resend callback (max 3 times) every 0,5 seconds.
@@ -80,34 +80,34 @@ Callback with automatic callback are represented in a UML activity graph below:
 <img alt="Token generation UML activity diagram" width="600" src='https://documentation.markid.eu/resources/Default_Callback_with_auto.png' />
 
 
-1. Generate a token by sending an HTTP POST request to `https://ivs.idenfy.com/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
+1. Generate a token by sending an HTTP POST request to `https://ivs.Mark ID.com/api/v2/token` endpoint. The request must contain basic auth headers, where the username is the API key and the password is API secret. 
 
   More information can be found [here](/pages/fraud-prevention-services/GeneratingIdentificationToken).
 
-2. Redirect the client to the iDenfy platform. It can be done in several ways:
+2. Redirect the client to the Mark ID platform. It can be done in several ways:
     - Client redirect to verification WEB platform
     - Client redirect to verification WEB platform (iFrame)
     - iOS SDK
     - Android SDK
 3. Client submits all documents (tries to verify at least one time).
 
-  3.1. If a client doesn't upload all photos at least one time, for example, face photos are missing and only the document’s photo are captured after session time expires iDenfy system will send a callback about expired notification to the provided URL with overall status: ”EXPIRED”.
+  3.1. If a client doesn't upload all photos at least one time, for example, face photos are missing and only the document’s photo are captured after session time expires Mark ID system will send a callback about expired notification to the provided URL with overall status: ”EXPIRED”.
 
 4. The client completes the verification process. 
 When the verification process is complete, please check [here](/pages/fraud-prevention-services/FAQ#when-verification-process-is-complete).
 
-  4.1. If a client captures all photos at least one time, but verification was unsuccessful while more attempts are available after session time expires iDenfy system will send a callback about expired notification to the provided URL with overall status: ”DENIED”.
+  4.1. If a client captures all photos at least one time, but verification was unsuccessful while more attempts are available after session time expires Mark ID system will send a callback about expired notification to the provided URL with overall status: ”DENIED”.
 
 5. After the verification process is completed we will perform full document analysis by the automated system.
 6. After the automatic analysis process is done, we are sending all data with auto results to the registered callback URL.
-7. Receiving all data with auto results sent by iDenfy to your provided endpoint.
+7. Receiving all data with auto results sent by Mark ID to your provided endpoint.
 8. Returning HTTP status code 200.
 
   8.1. HTTP status code is not 200. Trying to resend callback (max 3 times) every 0,5 seconds.
 
 9. After the automatic verification process is completed and 200 status received we will perform full document analysis by human supervision. The Analysis process can take up to 20 minutes (on average about 10 minutes).
 10. After the manual analysis process is done, we are sending all data with manual results to the registered callback URL.
-11. Receiving all data with manual results sent by iDenfy to your provided endpoint.
+11. Receiving all data with manual results sent by Mark ID to your provided endpoint.
 12. Returning HTTP status code 200.
 
   12.1. HTTP status code is not 200. Trying to resend callback (max 3 times) every 0,5 seconds.
@@ -133,8 +133,8 @@ Request HTTP body is in JSON format which is described in tables below:
 | `fileUrls`           | `Object` | -                      | Dictionary that contains url links to download or view client's verification photos and videos. [Refer to file urls table](#file-urls-table)                                                                                    |
 | `aml`                | `Object` | -                      | Dictionary that contains anti-money-laundering (AML) service data. Only applicable if AML is enabled for you. [Refer to AML documentation](/pages/fraud-prevention-services/aml).                                                                         |
 | `lid`                | `Object` | -                      | Dictionary that contains lost-invalid-documents (LID) service data. Only applicable if LID is enabled for you. [Refer to LID documentation](/pages/fraud-prevention-services/lid).                                                                        |
-| `scanRef`            | `String` | - Max length 36        | A unique string to trace back a verification on iDenfy’s side.                                                                                                                                                                  |
-| `externalRef`        | `String` | - Max length 40        | A unique string for external reference to link better the client to you and the iDenfy system.                                                                                                                                  |
+| `scanRef`            | `String` | - Max length 36        | A unique string to trace back a verification on Mark ID’s side.                                                                                                                                                                  |
+| `externalRef`        | `String` | - Max length 40        | A unique string for external reference to link better the client to you and the Mark ID system.                                                                                                                                  |
 | `clientId`           | `String` | - Max length 100       | A unique string to trace back a client on your side.                                                                                                                                                                            |
 | `startTime`          | `Int   ` | -                      | A timestamp of when a client starts the verification process.                                                                                                                                                                   |
 | `finishTime`         | `Int   ` | -                      | A timestamp of when the final decision for automatic processing was made.                                                                                                                                                       |

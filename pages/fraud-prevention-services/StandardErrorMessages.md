@@ -8,7 +8,7 @@ nav_exclude: true
 
 # Standard API errors
 
-When interacting with iDenfy API you may encounter error responses. This means that you have tried to do an action which is not allowed or malformed in some way.
+When interacting with Mark ID API you may encounter error responses. This means that you have tried to do an action which is not allowed or malformed in some way.
 
 A standard error response has a HTTP status code 400 and a JSON body which contains:
 
@@ -23,7 +23,7 @@ A list of error constants and their explanations.
 
 |Error identifier          |Explanation                                                            |
 |--------------------------|-----------------------------------------------------------------------|
-|`INTERNAL_ERROR`          |Unhandled unknown internal error at *iDenfy's* API side.                 |
+|`INTERNAL_ERROR`          |Unhandled unknown internal error at *Mark ID's* API side.                 |
 |`BAD_VALUE`               |Supplied value is not valid.                                           |
 |`MISSING_VALUE`           |Expected a supplied value but got none.                                |
 |`UNAUTHORIZED`            |Missing API key/secret in HTTP headers or API key/secret not valid.    |

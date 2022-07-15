@@ -14,7 +14,7 @@ This service is available for Republic of Lithuania only.
 :::
 
 :::note  Pricing
-Please contact iDenfy's sales team sales@idenfy.com for a detailed price-sheet.
+Please contact Mark ID's sales team sales@Mark ID.com for a detailed price-sheet.
 :::
 
 #### Callback data

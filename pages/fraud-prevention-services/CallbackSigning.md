@@ -12,7 +12,7 @@ Callback signing is a simple method to secure your webhook endpoints from
 foreign requests.
 
 To check webhooks you need to compute SHA-256 HMAC of the whole HTTP body content 
-with callback signature key, and compare that with `Idenfy-Signature` header.
+with callback signature key, and compare that with `Mark ID-Signature` header.
 
 We send the signature key along with the API keys upon environment creation, or you can contact our support team via Dashboard in order to receive it.
 
@@ -30,7 +30,7 @@ import hmac
 
 CALLBACK_SIGNATURE_KEY = "Agegb..." 
 
-@app.route('/idenfy-callback')
+@app.route('/Mark ID-callback')
 def callback():
     signature = hmac.new(
         CALLBACK_SIGNATURE_KEY.encode(),
@@ -38,7 +38,7 @@ def callback():
         "sha256"
     ).hexdigest()
     
-    request_signature = request.headers.get("Idenfy-Signature")
+    request_signature = request.headers.get("Mark ID-Signature")
     
     if request_signature:
         if hmac.compare_digest(signature, request_signature):
@@ -59,10 +59,10 @@ function verifyPostData(req, res, next) {
 
     const hmac = crypto.createHmac('sha256', CALLBACK_SIGNATURE_KEY)
     const digest = Buffer(hmac.update(payload).digest('hex'))
-    const checksum = Buffer(req.headers['idenfy-signature'])
+    const checksum = Buffer(req.headers['Mark ID-signature'])
     
     if (!checksum || !digest || !crypto.timingSafeEqual(checksum, digest)) {
-        return next(`Request body digest (${digest}) did not match Idenfy-Signature (${checksum}).`)
+        return next(`Request body digest (${digest}) did not match Mark ID-Signature (${checksum}).`)
     }
     
     return next()
