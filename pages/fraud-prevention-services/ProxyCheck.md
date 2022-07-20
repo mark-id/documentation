@@ -23,9 +23,9 @@ The request must contain *basic auth* headers where *username* is *api key* and 
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.eu
-- support@markid.eu
-- info@markid.eu
+- sales@markid.lt
+- support@markid.lt
+- info@markid.lt
 :::
 
 <br/>

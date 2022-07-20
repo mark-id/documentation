@@ -14,8 +14,8 @@ If you have ***API key*** and ***API secret*** you can create a verification tok
 
 :::note
 ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.eu
-- info@markid.eu
+- sales@markid.lt
+- info@markid.lt
 - via Dashboard
 :::
 
@@ -75,7 +75,7 @@ The request must contain JSON with optional and mandatory parameters:
 
 :::note
 If you're generating a 8 digit mobile code, please keep in mind that for security purposes, `expiryTime` cannot be longer than `generateDigitString` default value(must be the value as default `expiryTime`).
-If you need to increase the maximum default value of the mobile code expiration, please contact sales@markid.eu or our technical support team via Dashboard. 
+If you need to increase the maximum default value of the mobile code expiration, please contact sales@markid.lt or our technical support team via Dashboard. 
 :::
 ### Receiving response
 The response JSON contains exact same fields as JSON during token generation. It also returns default values for fields
@@ -248,7 +248,7 @@ You can generate a token with customizable settings, such as liveness face detec
 
 The default values of the settings depend on the environment's configuration. You can freely contact our support team using your Dashboard account to inquire about current and available settings, some of them have to be included in your contract before it can be enabled.
 
-Our sales team at sales@markid.eu will be happy to answer contract related questions and possibilities of including additional services to your environments.
+Our sales team at sales@markid.lt will be happy to answer contract related questions and possibilities of including additional services to your environments.
 
 Please find the full available list of settings below:
 

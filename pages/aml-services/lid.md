@@ -14,7 +14,7 @@ This service is available for Republic of Lithuania only.
 :::
 
 :::note  Pricing
-Please contact Mark ID sales team sales@markid.eu for a detailed price-sheet.
+Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
 :::
 
 #### Callback data

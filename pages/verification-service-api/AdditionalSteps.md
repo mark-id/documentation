@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 Using this functionality will let you add additional steps for your users to complete in the verification process. These steps could include utility bill upload or an extra photo of your client. The text can be fully customizable.
 
 :::note
-To make this functionality available, please contact sales@markid.eu if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account. 
+To make this functionality available, please contact sales@markid.lt if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account. 
 :::
 
 ### Utility bill
