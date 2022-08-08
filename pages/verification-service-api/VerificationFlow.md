@@ -12,7 +12,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Mark ID identity verification sessions can be configured with different flows that allows additional flexibility on the default flow that is displayed below:
 
-<img alt="Full flow" width="700" src='https://documentation.markid.eu/resources/defaultFlow.gif' />
+<img alt="Full flow" width="700" src='https://documentation.markid.eu/resources/defaultFlow.jpg' />
 
 
 Changes may be applied to:
