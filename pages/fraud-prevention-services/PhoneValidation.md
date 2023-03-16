@@ -16,11 +16,10 @@ Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/validate-phone`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
-:::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.lt
-- via Dashboard
-:::
+{: .note }
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - via Dashboard
 
 <br/>
 
@@ -76,6 +75,6 @@ The request must contain JSON with parameters:
     "request_id": "fcecf6e6-1ad7-4d5e-98a8-cc9b2d5575eb"
 }
 ```
-:::note
+
+{: .note }
 If the provided phone number in the request is not in [E.164](https://en.wikipedia.org/wiki/E.164) format or it isn't a *mobile* phone number, our servers may return an empty string.  `""`
-:::

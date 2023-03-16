@@ -16,10 +16,9 @@ with callback signature key, and compare that with `Mark ID-Signature` header.
 
 We send the signature key along with the API keys upon environment creation, or you can contact our support team via Dashboard in order to receive it.
 
-:::important
- You should not use standard `==` operator to avoid timing attacks. You
+{: .important }
+You should not use standard `==` operator to avoid timing attacks. You
 should use `hmac.compare_digest`, `crypto.timingSafeEqual`  or equivalent constant time string comparison.
-:::
 
 ### Examples
 

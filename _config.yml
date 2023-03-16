@@ -1,2 +1,13 @@
 title: Mark ID
 remote_theme: pmarsceill/just-the-docs
+
+callouts:
+  note:
+    color: blue
+
+  important:
+    color: purple
+
+  caution:
+    color: red
+

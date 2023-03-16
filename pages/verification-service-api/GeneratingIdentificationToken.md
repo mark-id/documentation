@@ -12,12 +12,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 If you have ***API key*** and ***API secret*** you can create a verification token.
 
-:::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.lt
-- info@markid.lt
-- via Dashboard
-:::
+{: .note }
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - info@markid.lt
+> - via Dashboard
 
 ### Graphical representation of token generation (UML activity)
 
@@ -34,11 +33,8 @@ Provide only clientId value while generating a token.
 Do not provide whole client information. Often clients make mistakes and cannot pass the verification successfully.
 Use client information (name, surname and etc.) from our system's [webhook](/pages/verification-service-api/ResultCallback). This would prevent errors and improve user experience.
 
-:::caution
-
+{: .caution }
 If provided information is incorrect or different than information found in the document, you would get verification `overall` status `SUSPECTED` with `mismatchTags`: `DOC_INFO_MISMATCH`
-
-:::
 
 The request must contain JSON with optional and mandatory parameters:
 
@@ -73,10 +69,10 @@ The request must contain JSON with optional and mandatory parameters:
 |`additionalData`|No|Additional data provided alongside any [additionalSteps](/pages/verification-service-api/AdditionalSteps), for example - Social Security Number in `UTILITY_BILL`|JSON object|Must be used with [additionalSteps](/pages/verification-service-api/AdditionalSteps)|`null`|
 |`callbackUrl`|No|A webhook endpoint for the generated session.|String|Must be HTTPS URL, requires permissions enabled(contact tech support via dashboard if the request is refused).|-|
 
-:::note
-If you're generating a 8 digit mobile code, please keep in mind that for security purposes, `expiryTime` cannot be longer than `generateDigitString` default value(must be the value as default `expiryTime`).
-If you need to increase the maximum default value of the mobile code expiration, please contact sales@markid.lt or our technical support team via Dashboard. 
-:::
+{: .note }
+> If you're generating a 8 digit mobile code, please keep in mind that for security purposes, `expiryTime` cannot be longer than `generateDigitString` default value(must be the value as default `expiryTime`).
+> If you need to increase the maximum default value of the mobile code expiration, please contact sales@markid.lt or our technical support team via Dashboard. 
+
 ### Receiving response
 The response JSON contains exact same fields as JSON during token generation. It also returns default values for fields
 that were optional and not specified during token generation. Additionally, the response also provides these fields below:
@@ -273,22 +269,18 @@ Please find the full available list of settings below:
 |`checkUrjanet`|Bool|This option is turned on for utility address check.|
 |`detectionTypes`|List[String]|Specifies the priority for detection in selfie processing for mobile users.<br/> Possible values: <br/>`FACE`<br/>`EYES`
 
-:::important
-None of the above parameters are mandatory, and they have to be turned on in your environment's configuration before you can pass a specific option parameter in your token generation request.
-
-If the option is turned on in the configuration, they will be active for all of the generated tokens, unless you specify othwerise with the above parameters.
-
-As a result, these options will give you more freedom in customizing our services and applying them in more different scenarios.
-
-Please keep in mind that some of these parameters are already in optimal and tested settings. Use at your own risk.
-:::
-
+{: .important }
+> None of the above parameters are mandatory, and they have to be turned on in your environment's configuration before you can pass a specific option parameter in your token generation request.
+> 
+> If the option is turned on in the configuration, they will be active for all of the generated tokens, unless you specify othwerise with the above parameters.
+> 
+> As a result, these options will give you more freedom in customizing our services and applying them in more different scenarios.
+> 
+> Please keep in mind that some of these parameters are already in optimal and tested settings. Use at your own risk.
 
 
-:::note
 
-In case of a malformed JSON body or API key/secret mismatch you will receive a standard Mark ID API error response. 
-
-For more on Mark ID API responses visit Mark ID error messages [Mark ID error messages](/pages/fraud-prevention-services/StandardErrorMessages).
-
-:::
+{: .note }
+> In case of a malformed JSON body or API key/secret mismatch you will receive a standard Mark ID API error response. 
+> 
+> For more on Mark ID API responses visit Mark ID error messages [Mark ID error messages](/pages/fraud-prevention-services/StandardErrorMessages).

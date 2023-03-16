@@ -17,9 +17,8 @@ Your API **must** return HTTP response with status code `200`. Otherwise, a clie
 
 If you are experiencing any issues receiving a webhook - [webhook troubleshooting section](/pages/verification-service-api/ResultCallback#webhook-troubleshooting).
 
-:::note
+{: .note }
 All of our webhooks are TLS encrypted and require a valid SSL certificate of your webhook endpoint, otherwise, the webhook sending will fail.
-:::
 
 ## Verification and webhook flow
 

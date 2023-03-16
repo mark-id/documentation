@@ -10,12 +10,9 @@ nav_order: 8
 This endpoint lets you upload customer photos by yourself and start processing immediately without using Mark ID WEB or mobile SDK UI. The verification token is deactivated after this request.
 
 
-:::important
-
+{: .important }
 Using this implementation type you lose these features: 3D liveness detection and short video before taking photos. 
 If 3D liveness detection and short video before taking photos is required for you, please use another integration type.
-
-:::
 
 
 ### Sending request
@@ -23,12 +20,11 @@ Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/process`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
-:::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.lt
-- info@markid.lt
-- via Dashboard
-:::
+{: .note }
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - info@markid.lt
+> - via Dashboard
 
 **The maximum request size is 20 MB**
 
@@ -84,8 +80,5 @@ Failed API calls will return a message identifying the problem.
 }
 ```
 
-:::note
-
+{: .note }
 Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *Mark ID* API error response. For more on *Mark ID* API responses visit [Mark ID error messages](/pages/fraud-prevention-services/StandardErrorMessages).
-
-:::

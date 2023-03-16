@@ -10,9 +10,11 @@ nav_exclude: true
 
 This service checks whether given person is in PEP or sanctions list, checks adverse media.
 
-:::note  Pricing
-Please contact Mark ID's sales team sales@Mark ID.com for a detailed price-sheet.
-:::
+{: .note-title }   
+> Pricing
+> 
+> Please contact Mark ID's sales team sales@Mark ID.com for a detailed price-sheet.
+
 
 ## Callback data
 The service check returns data associated with the person under check in JSON format.
@@ -160,7 +162,7 @@ A service response in `data` field returns a list of objects which are detailed 
                     "isPerson": true,
                     "isActive": true,
                     "checkDate": "2022-03-07 14:21:50"
-                },
+                }
             ],
             "serviceGroupType": "AML"
         },

@@ -9,13 +9,13 @@ nav_order: 3
 # Lost & Invalid documents
 This service checks whether given person's identity document is not registered as stolen or lost.
 
-:::important
+{: .important }  
 This service is available for Republic of Lithuania only.
-:::
 
-:::note  Pricing
-Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
-:::
+{: .note-title } 
+> Pricing
+> 
+> Please contact Mark ID sales team sales@markid.lt for a detailed price-sheet.
 
 #### Callback data
 The service check returns identity document's data in JSON format.
