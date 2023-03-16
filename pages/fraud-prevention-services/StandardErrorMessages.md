@@ -34,6 +34,5 @@ A list of error constants and their explanations.
 |`METHOD_NOT_ALLOWED`      |Wrong HTTP method.                                                     |
 |`PERMISSIONS_ERROR`       |Insufficient permissions for the request.                              |
 
-:::important
-A common error that results in 400 Bad Request with a message "Partner reached token limit." And identifier "PERMISSIONS_ERROR" when trying to generate a token means that your environment has run out of verification tokens. Please contact our support team Dashboard using your account. 
-:::
+{: .important }
+A common error that results in 400 Bad Request with a message "Partner reached token limit." And identifier "PERMISSIONS_ERROR" when trying to generate a token means that your environment has run out of verification tokens. Please contact our support team Dashboard using your account.

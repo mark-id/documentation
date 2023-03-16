@@ -18,19 +18,18 @@ Fraud checking API is an additional service used to further identify a person an
 
 ### Calling the API:
 
-:::important
-Fraud check endpoint was changed from `https://fraud.markid.eu/V1/check` to `https://ivs.markid.eu/fraud/check`
-:::
-Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/check`
+{: .important }
+> Fraud check endpoint was changed from `https://fraud.markid.eu/V1/check` to `https://ivs.markid.eu/fraud/check`
+>
+> Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/check`
+>
+> The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
 
-The request must contain **basic auth** headers where *username* is **API key** and *password* is **API secret**.
-
-:::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
-- sales@markid.lt
-- info@markid.lt
-- via Dashboard
-:::
+{: .note }  
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID tech support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - info@markid.lt
+> - via Dashboard
 
 The request must contain JSON with parameters:
 
@@ -96,7 +95,7 @@ If `LID` service is specified in `services` and `mode` is specified as `DATA` - 
 }
 ```
 
-:::important
+{: .important }
 Only one entry is allowed per request. If you'll provide multiple entries in `data`, the response will be 400(Bad request) - "message": "Incorrect request: data length must be 1".
 
 Incorrect request:
@@ -250,7 +249,7 @@ Incorrect request:
                     "isPerson": true,
                     "isActive": true,
                     "checkDate": "2022-03-07 14:21:50"
-                },
+                }
             ],
             "serviceGroupType": "AML"
         },

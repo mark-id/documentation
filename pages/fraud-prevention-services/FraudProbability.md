@@ -16,12 +16,11 @@ Send a *HTTP Post* request to: `https://ivs.markid.eu/fraud/estimate-fraud-proba
 
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
 
-:::note
-***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
-- sales@markid.lt
-- support@markid.lt
-- info@markid.lt
-:::
+{: .note }
+> ***API key*** and ***API secret*** can be retrieved by contacting *Mark ID support* or *Mark ID sales team*:
+> - sales@markid.lt
+> - support@markid.lt
+> - info@markid.lt
 
 <br/>
 
@@ -45,9 +44,8 @@ The request must contain JSON with parameters:
 |`credit_card_number_6`|No|`String`|- Length 6|The first 6 digits of the user's payment card|
 |`credit_card_last_4_digits`|No|`String`|- Length 4|The last 4 digits of the user's payment card|
 
-:::important
+{: .important }
 Despite that none of these parameters are required, but the request must contain at least one of them
-:::
 
 ### Receiving response
 

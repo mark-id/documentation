@@ -19,16 +19,15 @@ The company's logo does not show up inside the verification session's UI in ifra
 After the process is finished, you may close the iframe and display a desired page to your client.
 
 
-:::important 
-* Do not use `successUrl`, `errorUrl`, `unverifiedUrl` in [token generation](/pages/verification-service-api/GeneratingIdentificationToken)
+{: .important }
+> * Do not use `successUrl`, `errorUrl`, `unverifiedUrl` in [token generation](/pages/verification-service-api/GeneratingIdentificationToken)
 for iframe implementation. Using the mentioned parameters may break the flow.
-
-* Locale parameter in token generation will have no effect in iFrame.
-
-* To force the iFrame to use a locale, append `"lang=<alpha-2-country-code>"` URL parameter.
-
-Please find the available locales and examples below.
-:::
+>
+> * Locale parameter in token generation will have no effect in iFrame.
+> 
+> * To force the iFrame to use a locale, append `"lang=<alpha-2-country-code>"` URL parameter.
+>
+> Please find the available locales and examples below.
 
 #### Available locales
 
@@ -74,9 +73,9 @@ An example redirect url with english locale: <br/> https://ui.markid.eu/?authTok
   </body>
 </html>
 ```
-:::note
+
+{: .note }
 The data object can be found in the console.log message. The **allowfullscreen** attribute is mandatory if you're using our 3D liveness feature.
-:::
 
 ### Posssible values:
 

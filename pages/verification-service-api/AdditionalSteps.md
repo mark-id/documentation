@@ -11,16 +11,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Additional steps
 Using this functionality will let you add additional steps for your users to complete in the verification process. These steps could include utility bill upload or an extra photo of your client. The text can be fully customizable.
 
-:::note
-To make this functionality available, please contact sales@markid.lt if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account. 
-:::
+{: .note }
+To make this functionality available, please contact sales@markid.lt if your contract does not include additional steps. For technical questions please contact our support team using your Dashboard account.
 
 ### Utility bill
 You can add a requirement for your users to upload a utility bill in their verification process. Mark ID can extract and compare the adresses if you provide one in token generation.
 
-:::note
+{: .note }
 Please inform your users that regulations do not allow utility bills older than 3 months to be accepted.
-:::
 
 ### Sending a request for utility bill
 To [generate a token](GeneratingIdentificationToken) with utility bill step, simply add `"utilityBill": true` to your request like the example below:
@@ -317,9 +315,8 @@ The request must contain basic auth headers where username is API key and passwo
 ```
 `additionalData` is not required. However, you can pass values like {"address": "some address"} that our manual review team will use for comparison. Any data from the previous verification will be overriden after the new request.
 
-:::note
+{: .note }
 Requests sent to the `https://ivs.markid.eu/api/v2/upload-additional-step` endpoint will only work if the provided `scanRef` had custom additional steps provided in token generation.
-:::
 
 ### Value explanation
 * The first `ALL` value refers to country selection in alpha2 format. If you include specific countries in this value, the additional steps will only be added to these countries. `ALL` is used to include all countries.
@@ -353,6 +350,6 @@ After generating a token using the example above, your user will see additional 
   <img src='https://documentation.markid.eu/resources/ADDITIONALSTEP.png' alt="Additional Steps" width="450"/>
 </p>
 
-:::note
+{: .note }
 Our tech support team can add these additional steps to your environment's settings so these steps will have to be done by all users that go through verification process without the need to include them in the request each time. Please contact our support team via Dashboard and we'll gladly assist.
-:::
+

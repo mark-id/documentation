@@ -10,10 +10,9 @@ nav_order: 5
 
 You can generate a token with dummy auto status and add dummy manual status for verification in the development environment.
 
-:::note
+{: .note }
 Dummy session for developers is used to test the API with various statuses and receive a webhook without the need to go through the process in the UI.
 If you want to test the flow in the UI, please use the redirection methods - [Redirection to WEB UI](/pages/verification-service-api/ClientRedirectToWebUi) or [Redirection using iframe](/pages/verification-service-api/ClientRedirectToWebUiIframe) without the `dummyStatus` parameter.
-:::
 
 ## Dummy auto result
 
@@ -24,9 +23,8 @@ Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/token`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
-:::note
+{: .note }
 You should have a development environment, otherwise neither a simple token, nor token with dummy auto status will be created.
-:::
 
 The request must contain the same parameters as [token generation](/pages/verification-service-api/GeneratingIdentificationToken##sending-request) and *dummyStatus*, which defines dummy session's auto result.
 
@@ -108,9 +106,8 @@ Send a *HTTP POST* request to: `https://ivs.markid.eu/api/v2/add-dummy-status`
 
 The request must contain *basic auth* headers where *username* is *API key* and *password* is *API secret*.
 
-:::note
-Client's verification should be already created, otherwise, generate a new token with *dummyStatus* 
-:::
+{: .note }
+Client's verification should be already created, otherwise, generate a new token with *dummyStatus*
 
 The request must contain JSON with these parameters:
 

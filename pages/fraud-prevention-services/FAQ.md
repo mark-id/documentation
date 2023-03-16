@@ -149,7 +149,6 @@ When using an `iframe` tag, make sure to add an attribute `allow="camera"`.
 * List all manager accounts, delete, deactivate, reset passwords, view activity
 * API keys management
 
-:::note
+{: .note }
 There can be custom roles applied to a manager as well. If you need to restrict or provide more access to the accounts in your environment,
 contact techsupport@Mark ID.com with your request to change or add new roles.
-:::

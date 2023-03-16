@@ -144,8 +144,8 @@ You will receive HTTP response 200 and JSON body with the following data:
 }
 ```
 
-:::note
-Please contact sales@markid.lt to discuss the possibilities of including this service to your workflow.
+{: .note }
+> Please contact sales@markid.lt to discuss the possibilities of including this service to your workflow.
+> 
+> Technical inquiries should be forwarded to our technical support team via Dashboard. 
 
-Technical inquiries should be forwarded to our technical support team via Dashboard. 
-:::

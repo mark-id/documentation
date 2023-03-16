@@ -28,11 +28,11 @@ Changes may be applied to:
 ### Skipping certain steps
 
 Country selection, document selection, and instructions screens are accompanied with the values that you provide inside the verification session's [request](/pages/fraud-prevention-services/GeneratingIdentificationToken#sending-request). If the `country`, `documents`, `locale` parameters are included inside the request body, these values will be either preselected, or limited(e.g. `documents` that the user can choose from).
-:::note
-Document selection skipping will work only if available documents array size is 1, e.g, you allow only PASSPORT for this specific verification session.
 
-To enable skipping of a certain screen or step, forward your request to info@markid.lt
-:::
+{: .note }
+> Document selection skipping will work only if available documents array size is 1, e.g, you allow only PASSPORT for this specific verification session.
+> 
+> To enable skipping of a certain screen or step, forward your request to info@markid.lt
 
 ### Forcing specific language
 
@@ -70,6 +70,6 @@ Immediate redirect can be turned on if you want your users to be redirected back
 #### Skip waiting for results
 With this option turned on, your user will be immediately redirected to "unverifiedUrl" after they submit the verification. This way they won't be waiting for automatic check results. This option is used together with immediate redirect.
 
-:::note
+{: .note }
 If you do not use our API, you can still [create the sessions](/pages/fraud-prevention-services/GenerateIdentificationToken) with the same parameters described above through [Mark ID administration platform](https://kyc.markid.eu).
-:::
+
